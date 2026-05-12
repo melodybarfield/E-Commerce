@@ -220,7 +220,7 @@ HIGHLIGHTS
 }
 
 /*
-FEATUTRES
+FEATURES
 */
 
 #features {
@@ -230,6 +230,7 @@ FEATUTRES
 
 .books {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .book {
@@ -274,3 +275,5 @@ FEATUTRES
   padding-right: 6px;
   color: #bfbfbf;
 }
+
+/*LATEST BOOKS*/
