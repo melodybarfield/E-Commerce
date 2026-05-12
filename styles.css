@@ -125,6 +125,10 @@ button:active {
   transform: translateY(1px);
 }
 
+section:nth-child(even) {
+  background-color: rgba(115, 66, 214, 0.1);
+}
+
 .btn {
   background-color: #7342d6;
   color: white;
@@ -147,6 +151,12 @@ button:active {
   width: 100%;
   max-width: 1200px; /*caps the width*/
   margin: 0 auto; /*centers the row horizontally*/
+}
+
+.row__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*
@@ -276,4 +286,8 @@ FEATURES
   color: #bfbfbf;
 }
 
-/*LATEST BOOKS*/
+/*EXPLORE*/
+
+/*#explore {
+    background-color: rgba(115, 66, 214, 0.1);
+} could be another way of getting the background-color instead of doing section:nth-child(even)*/
