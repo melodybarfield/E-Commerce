@@ -89,6 +89,60 @@ li {
   text-decoration: none;
 }
 
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  border: none;
+  color: #7342d6;
+}
+
+.menu__backdrop {
+  position: absolute; /*makes all other elements go back to normal; burger menu does not effect their position; parent need to be set to relative in order for this to work*/
+  background-color: #242424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* setting top, left, right and bottom to 0 forces an element to stretch and fill its entire parent container; behavior depends on the element's position property (has to be set to absolute in this case; alternatively you could also do width: 100vw; and height: 100vh;*/
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*display: flex; justify-content: center; align-items: center centers the links*/
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column; /*puts elements vertically*/
+  align-items: center;
+  /*flex-direction: column flips what it usually does; makes align-items:center center elements horizontally instead of vertically*/
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  font-size: 40px;
+  color: white;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  /*puts closing button to the top right*/
+  padding: 8px;
+  color: white;
+}
+
+/* 
+
+LANDING
+
+*/
+
 #landing {
   background-color: rgba(115, 66, 214, 0.1);
 }
