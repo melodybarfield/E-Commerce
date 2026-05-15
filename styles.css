@@ -407,6 +407,32 @@ footer {
   padding: 0 8px;
 }
 
+/* Tablets*/
+
+@media (max-width: 768px) {
+  .header__description {
+    padding: 0 24px; /*adds horizontal padding to the header description on smaller screens to prevent the text from touching the edges of the screen*/
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .book {
+    width: 50%; /*makes the books take up half the width on smaller screens, making them stack in two columns instead*/
+  }
+}
+
+/* SMALL PHONES, LARGE SMARTPHONES*/
+
 @media (max-width: 550px) {
   .nav__links {
     display: none;
@@ -417,4 +443,13 @@ footer {
     display: block;
   }
   /*Displays the burger menu as a block element*/
+
+  .highlight {
+    width: 100%;
+    /*makes the highlights take up the full width on smaller screens, making them stack vertically instead of horizontally*/
+  }
+
+  .highlight:not(:last-child) {
+    margin-bottom: 48px;
+    }
 }
