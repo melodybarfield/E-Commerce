@@ -95,6 +95,7 @@ li {
   text-align: center;
   border: none;
   color: #7342d6;
+  display: none; /*hides the burger menu by default*/
 }
 
 .menu__backdrop {
@@ -106,13 +107,27 @@ li {
   bottom: 0;
   /* setting top, left, right and bottom to 0 forces an element to stretch and fill its entire parent container; behavior depends on the element's position property (has to be set to absolute in this case; alternatively you could also do width: 100vw; and height: 100vh;*/
   z-index: 100;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   align-items: center;
   /*display: flex; justify-content: center; align-items: center centers the links*/
+  transition: all 300ms ease; /*makes the backdrop transition smoothly when it becomes visible or hidden; we do "all" so the opacity and visibility transitions*/
+  visibility: hidden; /*hides the menu by default; different from display: none because it still takes up space in the layout (still is there which we want in order to be able to animate the backdrop), but it is not visible to the user; the reason why we use visibility and opacity is, that if we were to do display: none; we can not animate it (because it is basically not there*/
+  opacity: 0; /*hides the menu by default*/
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1; /*makes the backdrop visible when the menu is open*/
+}
+
+.menu--open {
+  max-height: 100vh; /*prevents the menu from being taller than the viewport height when it is open*/
+  overflow-y: hidden; /*prevents vertical scrolling when the menu is open (prevents from seeing what is left of the website underneath the backdrop)*/
 }
 
 .menu__links {
+  margin-top: 80px; /*pushes the links down*/
   display: flex;
   flex-direction: column; /*puts elements vertically*/
   align-items: center;
@@ -390,4 +405,16 @@ footer {
 
 .footer__link {
   padding: 0 8px;
+}
+
+@media (max-width: 550px) {
+  .nav__links {
+    display: none;
+  }
+  /*Hides nav__links when width is less than 550px*/
+
+  .btn__menu {
+    display: block;
+  }
+  /*Displays the burger menu as a block element*/
 }
