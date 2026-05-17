@@ -40,14 +40,46 @@ a:hover {
   text-decoration: underline;
 }
 
-.nav__container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 24px;
+ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 56px;
+  color: #7342d6;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/*section:nth-child(even) {
+  background-color: rgba(115, 66, 214, 0.1);
+}*/
+
+.btn {
+  background-color: #7342d6;
+  color: white;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: none;
 }
 
 .purple {
@@ -58,12 +90,14 @@ a:hover {
   width: 160px;
 }
 
-ul {
+.nav__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
   display: flex;
-}
-
-li {
-  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .nav__link {
@@ -185,43 +219,9 @@ header {
   align-items: center; /*to center the button you could alternatively add max-width: 200px on .btn*/
 }
 
-h1 {
-  font-size: 56px;
-  color: #7342d6;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 32px;
-  margin-bottom: 32px;
-  text-align: center;
-}
-
-button {
-  cursor: pointer;
-}
-
-button:active {
-  transform: translateY(1px);
-}
-
-section:nth-child(even) {
-  background-color: rgba(115, 66, 214, 0.1);
-}
-
-.btn {
-  background-color: #7342d6;
-  color: white;
-  padding: 12px 24px;
-  font-size: 20px;
-  border-radius: 4px;
-  border: none;
-}
-
 .header__img--wrapper {
   padding: 20px;
-  z-index: 2; /*goes to the figure and sets a z-index higher than the wave*/
+  z-index: 50; /*goes to the figure and sets a z-index higher than the wave*/
 }
 
 .container {
@@ -373,9 +373,9 @@ FEATURES
 
 /*EXPLORE*/
 
-/*#explore {
-    background-color: rgba(115, 66, 214, 0.1);
-} could be another way of getting the background-color instead of doing section:nth-child(even)*/
+#explore {
+  background-color: rgba(115, 66, 214, 0.1);
+} /*is another way of getting the background-color instead of doing section:nth-child(even)*/
 
 /*FOOTER*/
 
@@ -451,5 +451,5 @@ footer {
 
   .highlight:not(:last-child) {
     margin-bottom: 48px;
-    }
+  }
 }
